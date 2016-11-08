@@ -14,14 +14,10 @@ import java.net.UnknownHostException;
 @Controller
 @RequestMapping("/hello-world")
 public class TestController {
-    //@Value("${eureka.instance.ip-address}")
-    private String ipAddress="";
     @RequestMapping(method= RequestMethod.GET)
     public @ResponseBody String sayHello()  {
         try {
-            String ipAddres = "test: " + InetAddress.getLocalHost().getHostAddress();
-            System.err.println(ipAddres);
-            return ipAddres;
+            return "test: " + InetAddress.getLocalHost().getHostAddress();
         } catch (UnknownHostException e) {
             return e.getMessage();
         }
