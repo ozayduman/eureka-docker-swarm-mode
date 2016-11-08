@@ -4,5 +4,5 @@ ADD eureka-test-client-*.jar app.jar
 ADD run.sh run.sh
 RUN chmod +x run.sh
 RUN sh -c 'touch /app.jar'
-EXPOSE 8080
+EXPOSE 8181
 CMD ./run.sh
